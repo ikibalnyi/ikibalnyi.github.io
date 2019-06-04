@@ -7,6 +7,7 @@
 <meta name="description" content="The Curriculum Vitae of Illia Kibalnyi."/>
 <meta charset="UTF-8">
 
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <link type="text/css" rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
@@ -18,12 +19,14 @@
 <div id="cv" class="insta-fade">
 	<header id="main-details">
 		<div class="headshot">
-			<img src="images/headshot.jpg" alt="Alan Smith" />
+			<img src="images/headshot.jpg" alt="Illia Kibalnyi" />
 		</div>
 
 		<div class="name">
 			<h1>Illia Kibalnyi</h1>
 			<h2>Software Engineer</h2>
+			<div>Location: Berlin Area, Germany</div>
+			<div></div>
 		</div>
 
 		<div class="contact-details">
@@ -40,7 +43,7 @@
 		<section>
 			<article>
 				<div class="section-title">
-					<h1>Personal Profile</h1>
+					<h2>Personal Profile</h2>
 				</div>
 				
 				<div class="section-content">
@@ -54,12 +57,11 @@
 					</p>
 				</div>
 			</article>
-			<div class="clear"></div>
 		</section>
 
 		<section>
 			<div class="section-title">
-				<h1>Key Skills</h1>
+				<h2>Key Skills</h2>
 			</div>
 
 			<div class="section-content">
@@ -78,90 +80,99 @@
 					<li>C++ (basic)</li>
 				</ul>
 			</div>
-			<div class="clear"></div>
 		</section>
 
-		<section>
+		<section id="work-experience-section">
 			<div class="section-title">
-				<h1>Work Experience</h1>
+				<h2>Work Experience</h2>
 			</div>
 			
 			<div class="section-content">
-				<article>
-					<h2>Software Engineer at dunnhumby GmbH</h2>
-					<p class="sub-details">June 2018 - Present</p>
-					<p>
-						Configuration of gitlab CI/CD processes.
-						Proactively taking a leading role in building SPA with React+Redux
-						and stylize with styled-components.
-						Integration frontend with backend sources.
-					</p>
-				</article>
-				
-				<article>
-					<h2>Web Developer at Sociomantic Labs</h2>
-					<p class="sub-details">September 2017 - June 2018</p>
-					<p>
-						Development and maintenance of a complex SPA using React and MobX.
-						As a part of a core team, building React framework for internal usage.
-						In June 2018 Sociomantic Labs was fully integrated into dunnhumby GmbH.
-					</p>
-				</article>
-				
-				<article>
-					<h2>Web Developer at OnePlanetOps</h2>
-					<p class="sub-details">November 2015 - September 2017</p>
-					<p>
-						Full stack websites development and maintenance (tuning Nginx/Apache web servers)
-						using different programming languages (Python, Javascript, PHP, Go),
-						frameworks (ReactJS, Django, Yii2, CherryPy) and CMS (Wordpress).
-					</p>
+				<article class="job row">
+					<div class="column left-column job-duration">
+						<i class="job-duration">June 2018 - Present</i>
+					</div>
+					<div class="column description">
+						<h4 class="job-name">dunnhumby GmbH</h4>
+						<p class="job-name sub-details">Software Engineer</p>
+						<p class="job-description">
+							Configuration of gitlab CI/CD processes.
+							Proactively taking a leading role in building SPA using React+Redux.
+						</p>
+					</div>
 				</article>
 
-				<article>
-					<h2>Web Developer as Freelancer</h2>
-					<p class="sub-details">2013 - 2015</p>
-					<ul>
-						<li>Website development with various complexity</li>
-						<li>Working with different payment systems and payment aggregators using appropriate APIs, such as LiqPay, Paypal, Webmoney, etc.</li>
-						<li>Plugins, modules and components modifications for customers’ convenience.</li>
-						<li>Creating stable cross browser responsive designs.</li>
-					</ul>
+				<article class="job row">
+					<div class="column left-column job-duration">
+						<i class="job-duration">September 2017 - June 2018</i>
+					</div>
+					<div class="column description">
+						<h4 class="job-name">Sociomantic Labs</h4>
+						<p class="job-name sub-details">Web Developer</p>
+						<p class="job-description">
+							Development and maintenance of a complex SPA using React and MobX.
+							As a part of a core team, building React framework for internal usage.
+							In June 2018 Sociomantic Labs was fully integrated into dunnhumby GmbH.
+						</p>
+					</div>
+				</article>
+
+				<article class="job row">
+					<div class="column left-column job-duration">
+						<i class="job-duration">November 2015 - September 2017</i>
+					</div>
+					<div class="column description">
+						<h4 class="job-name">OnePlanetOps</h4>
+						<p class="job-name sub-details">Web Developer</p>
+						<p class="job-description">
+							Full stack websites development and maintenance (tuning Nginx/Apache web servers)
+							using different programming languages (Python, Javascript, PHP, Go),
+							frameworks (ReactJS, Django, Yii2, CherryPy) and CMS (Wordpress).
+						</p>
+					</div>
+				</article>
+
+				<article class="job row">
+					<div class="column left-column job-duration">
+						<i class="job-duration">October 2013 - November 2015</i>
+					</div>
+					<div class="column description">
+						<h4 class="job-name">Freelance</h4>
+						<p class="job-name sub-details">Web Developer</p>
+						<p class="job-description">
+							Building web applications using PHP, Javascript, HTML, CSS.
+							Making templates and plugins for CMS Wordpress.
+							Working with different payment systems and payment aggregators using
+							appropriate APIs, such as LiqPay, Paypal, Webmoney, etc. Creating stable cross browser
+							responsive designs.
+						</p>
+					</div>
 				</article>
 			</div>
-			<div class="clear"></div>
 		</section>
 		
 		<section>
 			<div class="section-title">
-				<h1>Education</h1>
+				<h2>Education</h2>
 			</div>
 			
 			<div class="section-content">
 				<article>
-					<h2>Oles Honchar Dnipro National University</h2>
+					<h4>Oles Honchar Dnipro National University</h4>
 					<p class="sub-details">Software Engineering</p>
-					<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>-->
 				</article>
 			</div>
-			<div class="clear"></div>
-		</section>
-
-		<section>
-			<div class="section-title">
-				<h1>Actions</h1>
-			</div>
-
-			<div class="section-content">
-				<article>
-					<h2>Oles Honchar Dnipro National University</h2>
-					<p class="sub-details">Software Engineering</p>
-					<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>-->
-				</article>
-			</div>
-			<div class="clear"></div>
 		</section>
 	</main>
+
+	<footer id="footer">
+		<a class="btn btn-info" href="mailto:illia.kibalnyi@gmail.com">
+			Contact me via email
+		</a>
+		<a class="btn btn-print" href="javascript:window.print();">
+			Print my curriculum vitae
+		</a>
+	</footer>
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
