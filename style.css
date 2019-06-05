@@ -7,11 +7,11 @@ body {
     background-attachment : fixed;
     font-family           : 'Lato', helvetica, arial, sans-serif;
     font-size             : 16px;
-    color                 : #333333;
+    color                 : #333;
 }
 
 ul, p, h1, h2, h3, h4 {
-    margin-top : 0;
+    margin-top    : 0;
     margin-bottom : 0;
 }
 
@@ -58,16 +58,27 @@ a {
     user-select         : none;
 }
 
-.btn-info {
+.btn-primary {
     color            : #fff;
-    background-color : #5cb85c;
-    border-color     : #4cae4c;
+    background-color : #cf8a05;
+    border-color     : #cf8a05;
 }
 
-.btn-print {
-    color            : #fff;
-    background-color : #0084dc;
-    border-color     : #007ed4;
+.btn-primary:hover {
+    background-color : #ba7c04;
+    border-color     : #ba7c04;
+}
+
+.btn-secondary {
+    color            : #ba7c04;
+    border-color     : #ba7c04;
+    background-color : transparent;
+}
+
+.btn-secondary:hover {
+    color            : #906003;
+    border-color     : #906003;
+    text-decoration  : underline;
 }
 
 #cv {
@@ -124,7 +135,8 @@ a {
 }
 
 .contact-details {
-    float : right;
+    float      : right;
+    text-align : right;
 }
 
 .contact-details ul {
@@ -168,22 +180,22 @@ section:last-child {
 }
 
 #work-experience-section .left-column {
-    flex-basis : 25%;
-    text-align : right;
+    flex-basis    : 27%;
+    text-align    : right;
+    padding-right : 10px;
 }
 
 #work-experience-section .job-duration {
-    line-height: 23px;
+    line-height : 23px;
 }
 
 .row {
     display        : flex;
-    flex-direction : row
+    flex-direction : row;
 }
 
 .column {
-    flex    : 0 1 100%;
-    padding : 0 5px;
+    flex : 0 1 100%;
 }
 
 .section-title h2 {
@@ -198,7 +210,7 @@ section:last-child {
 .section-content h4 {
     font-family   : 'Rokkitt', Helvetica, Arial, sans-serif;
     font-size     : 1.5em;
-    margin-bottom : -2px;
+    margin-bottom : 4px;
     font-weight   : 400;
 }
 
@@ -386,12 +398,12 @@ section:last-child {
 
 @media print {
     #cv {
-        width : auto;
+        width  : auto;
         margin : 0;
     }
 
     .job {
-        page-break-inside: avoid;
+        page-break-inside : avoid;
     }
 
     #footer {
