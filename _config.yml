@@ -4,9 +4,14 @@ description: >-
   The Curriculum Vitae of Illia Kibalnyi.
 domain: ikibalnyi.github.io
 phone: +41747028329
+
 google_analytics: UA-141571444-1
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+
+exclude:
+  - .idea
+  - .gitignore
