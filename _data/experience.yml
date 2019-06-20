@@ -1,0 +1,36 @@
+- company: dunnhumby GmbH
+  position: Software Engineer
+  startDate: Jun 2018
+  endDate: Present
+  description: |
+    Configuration of gitlab CI/CD processes.
+    Proactively taking a leading role in building SPA using React+Redux.
+
+- company: Sociomantic Labs
+  position: Web Developer
+  startDate: Sep 2017
+  endDate: Jun 2018
+  description: |
+    Development and maintenance of a complex SPA using React and MobX.
+    As a part of a core team, building React framework for internal usage.
+    In June 2018 Sociomantic Labs was fully integrated into dunnhumby GmbH.
+    
+- company: OnePlanetOps
+  position: Web Developer
+  startDate: Nov 2015
+  endDate: Sep 2017
+  description: |
+    Full stack websites development and maintenance (tuning Nginx/Apache web servers)
+    using different programming languages (Python, Javascript, PHP, Go),
+    frameworks (ReactJS, Django, Yii2, CherryPy) and CMS (Wordpress).
+
+- company: Freelance
+  position: Web Developer
+  startDate: Oct 2013
+  endDate: Nov 2015
+  description: |
+    Building web applications using PHP, Javascript, HTML, CSS.
+    Making templates and plugins for CMS Wordpress.
+    Working with different payment systems and payment aggregators using
+    appropriate APIs, such as LiqPay, Paypal, Webmoney, etc. Creating stable cross browser
+    responsive designs.
