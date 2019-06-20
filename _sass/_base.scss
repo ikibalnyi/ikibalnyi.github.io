@@ -1,0 +1,137 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size} $base-font-family;
+  color: $text-color;
+  background-color: $background-primary-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+/**
+ * `main` element
+ */
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+/**
+ * Lists
+ */
+ ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Links
+ */
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: color .2s ease-in;
+
+  &:hover {
+    color: $brand-color;
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Paragraph
+ */
+p {
+  margin-bottom: 20px;
+  color: $text-color;
+  line-height: $base-line-height;
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $background-primary-color;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: $content-width;
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+  }
+
+  @media print {
+    .wrapper {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}

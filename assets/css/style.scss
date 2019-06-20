@@ -2,42 +2,8 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-*, ::after, ::before {
-    box-sizing: border-box;
-}
+@import "style";
 
-body {
-    font-family: 'Lato', helvetica, arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    margin: 0;
-}
-
-ul, p, h1, h2, h3, h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-ul {
-    padding-left: 30px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.4em;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-a {
-    color: #337ab7;
-    text-decoration: none;
-}
-
-.clear {
-    clear: both;
-}
 
 .btn {
     display: inline-block;
@@ -82,10 +48,6 @@ a {
     color: #906003;
     border-color: #906003;
     text-decoration: underline;
-}
-
-#cv {
-    background: #f3f3f3;
 }
 
 #main-details {
@@ -255,12 +217,6 @@ section:last-child {
         background: #3b0930 url(../images/bg.jpeg) no-repeat center / cover;
         background-attachment: fixed;
     }
-
-    #cv {
-        width: 90%;
-        max-width: 800px;
-        margin: 30px auto;
-    }
 }
 
 @media all and (max-width: 601px) {
@@ -301,11 +257,6 @@ section:last-child {
 }
 
 @media print {
-    #cv {
-        width: auto;
-        margin: 0;
-    }
-
     .job {
         page-break-inside: avoid;
     }
