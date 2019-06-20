@@ -82,10 +82,15 @@ a {
 }
 
 #cv {
-    width      : 90%;
-    max-width  : 800px;
     background : #f3f3f3;
-    margin     : 30px auto;
+}
+
+@media (min-height: 720px) {
+    #cv {
+        width      : 90%;
+        max-width  : 800px;
+        margin     : 30px auto;
+    }
 }
 
 #main-details {
@@ -104,13 +109,14 @@ a {
     font-size     : 2.5em;
     font-weight   : 700;
     font-family   : 'Rokkitt', Helvetica, Arial, sans-serif;
-    margin-bottom : -6px;
+    margin-bottom : 0;
 }
 
 .name h2 {
-    font-size   : 2em;
-    margin-left : 2px;
-    font-family : 'Rokkitt', Helvetica, Arial, sans-serif;
+    font-size     : 2em;
+    margin-left   : 2px;
+    font-family   : 'Rokkitt', Helvetica, Arial, sans-serif;
+    margin-bottom : 6px;
 }
 
 #main-area {
@@ -146,7 +152,7 @@ a {
 }
 
 .contact-details ul li {
-    margin-bottom : 3px;
+    margin-bottom : 8px;
     color         : #444;
 }
 
@@ -211,11 +217,10 @@ section:last-child {
     font-family   : 'Rokkitt', Helvetica, Arial, sans-serif;
     font-size     : 1.5em;
     margin-bottom : 4px;
-    font-weight   : 400;
+    font-weight: 600;
 }
 
 .sub-details {
-    font-size     : 0.8em;
     font-style    : italic;
     margin-bottom : 3px;
 }
