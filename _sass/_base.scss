@@ -87,7 +87,6 @@ a {
 
   &:hover {
     color: $brand-color;
-    text-decoration: underline;
   }
 }
 
@@ -97,7 +96,7 @@ a {
 p {
   margin-bottom: 20px;
   color: $text-color;
-  line-height: $base-line-height;
+  line-height: $text-line-height;
 }
 
 /**
@@ -109,7 +108,7 @@ p {
   background-color: $background-primary-color;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
+  @include media-query($screen-md) {
     max-width: $content-width;
     margin-top: $spacing-unit;
     margin-bottom: $spacing-unit;
@@ -120,6 +119,53 @@ p {
       width: auto;
       margin: 0;
     }
+  }
+}
+
+
+/*
+ * Buttons
+ */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.btn-primary {
+  color: $text-color-inverse;
+  background-color: $brand-color;
+  border-color: $brand-color;
+
+  &:hover {
+    color: $text-color-inverse;
+    background-color: $brand-color-darken;
+    border-color: $brand-color-darken;
+  }
+}
+
+.btn-secondary {
+  color: $brand-color-darken;
+  border-color: $brand-color-darken;
+  background-color: transparent;
+
+  &:hover {
+    color: scale-color($brand-color, $lightness: -30%);
+    border-color: scale-color($brand-color, $lightness: -30%);
+    text-decoration: underline;
   }
 }
 
