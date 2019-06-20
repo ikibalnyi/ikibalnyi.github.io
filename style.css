@@ -85,7 +85,7 @@ a {
     background : #f3f3f3;
 }
 
-@media (min-height: 720px) {
+@media (min-width: 720px) {
     #cv {
         width      : 90%;
         max-width  : 800px;
