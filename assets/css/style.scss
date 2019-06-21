@@ -11,6 +11,8 @@
     background: #ededed;
     display: flex;
     align-items: center;
+
+    @extend %clearfix;
 }
 
 #main-details .name {
