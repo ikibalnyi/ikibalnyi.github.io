@@ -1,0 +1,13 @@
+{% assign headline = include.headline | default: "Education" %}
+{% assign education = include.education[0] %}
+
+{% capture includeContent %}
+<article>
+    <h4>{{ education.university }}</h4>
+    <p class="sub-details">{{ education.degree }}, {{ education.field }}</p>
+</article>
+{% endcapture %}
+
+{%- include section.html title=headline content=includeContent %}
+
+

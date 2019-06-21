@@ -1,0 +1,22 @@
+{% assign headline = include.headline | default: "Work Experience" %}
+
+{% capture includeContent %}
+{% for job in include.experience %}
+<article class="job row">
+    <div class="column left-column job-duration">
+        <i class="job-duration">{{ job.startDate }} - {{ job.endDate }}</i>
+    </div>
+    <div class="column description">
+        <h4 class="job-name">{{ job.company }}</h4>
+        <p class="job-name sub-details">{{ job.position }}</p>
+        <p class="job-description">
+            {{ job.description }}
+        </p>
+    </div>
+</article>
+{% endfor %}
+{% endcapture %}
+
+{%- include section.html title=headline content=includeContent %}
+
+

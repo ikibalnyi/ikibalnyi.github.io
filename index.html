@@ -1,74 +1,28 @@
 ---
-layout: home
+layout: default
 ---
 
+{%- include header.html %}
+
 <main id="main-area">
-    <section>
-        <article>
-            <div class="section-title">
-                <h2>Personal Profile</h2>
-            </div>
+    {% capture summary%}
+        <p>
+            More than 5 years of experience in web development.
+            I always make creativity and innovation my priority.
+            Always try to be up to date with new cutting edge technologies.
+            Experienced in work with team and equal attitude to every colleague.
+            Desire to perfect my skills in every scope. Ready to receive new knowledge,
+            skills or advice and contemporaneously prepared to share the same.
+        </p>
+    {% endcapture %}
 
-            <div class="section-content">
-                <p>
-                    More than 5 years of experience in web development.
-                    I always make creativity and innovation my priority.
-                    Always try to be up to date with new cutting edge technologies.
-                    Experienced in work with team and equal attitude to every colleague.
-                    Desire to perfect my skills in every scope. Ready to receive new knowledge,
-                    skills or advice and contemporaneously prepared to share the same.
-                </p>
-            </div>
-        </article>
-    </section>
+    {%- include section.html title="Personal Profile" content=summary %}
 
-    <section>
-        <div class="section-title">
-            <h2>Key Skills</h2>
-        </div>
+    {%- include sections/key-skills.html keySkills=site.data.about.keySkills %}
 
-        <div class="section-content">
-            <ul class="key-skills">
-                {% for skill in site.data.about.keySkills %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
+    {%- include sections/experience.html experience=site.data.experience %}
 
-    <section id="work-experience-section">
-        <div class="section-title">
-            <h2>Work Experience</h2>
-        </div>
-
-        <div class="section-content">
-            {% for job in site.data.experience %}
-                <article class="job row">
-                    <div class="column left-column job-duration">
-                        <i class="job-duration">{{ job.startDate }} - {{ job.endDate }}</i>
-                    </div>
-                    <div class="column description">
-                        <h4 class="job-name">{{ job.company }}</h4>
-                        <p class="job-name sub-details">{{ job.position }}</p>
-                        <p class="job-description">
-                            {{ job.description }}
-                        </p>
-                    </div>
-                </article>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section>
-        <div class="section-title">
-            <h2>Education</h2>
-        </div>
-
-        <div class="section-content">
-            <article>
-                <h4>{{ site.data.education[0].university }}</h4>
-                <p class="sub-details">{{ site.data.education[0].degree }}, {{ site.data.education[0].field }}</p>
-            </article>
-        </div>
-    </section>
+    {%- include sections/education.html education=site.data.education %}
 </main>
+
+{%- include footer.html %}

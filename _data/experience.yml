@@ -4,7 +4,9 @@
   endDate: Present
   description: |
     Configuration of gitlab CI/CD processes.
-    Proactively taking a leading role in building SPA using React+Redux.
+    Proactively taking a leading role in building complex applications
+    using React+Redux and stylize with styled-components.
+    Mentorship of junior developers.
 
 - company: Sociomantic Labs
   position: Web Developer
@@ -14,7 +16,7 @@
     Development and maintenance of a complex SPA using React and MobX.
     As a part of a core team, building React framework for internal usage.
     In June 2018 Sociomantic Labs was fully integrated into dunnhumby GmbH.
-    
+
 - company: OnePlanetOps
   position: Web Developer
   startDate: Nov 2015

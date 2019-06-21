@@ -1,0 +1,12 @@
+{% assign headline = include.headline | default: "Key Skills" %}
+
+
+{% capture includeContent %}
+    <ul class="key-skills">
+        {% for skill in include.keySkills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+{% endcapture %}
+
+{%- include section.html title=headline content=includeContent %}
