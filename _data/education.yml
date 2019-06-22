@@ -1,17 +1,13 @@
 - university: Oles Honchar Dnipro National University
   degree: Master's Degree
   field: Software Engineering
+  logo: dnu.png
   endDate: 2017
-  startDate: 2016
-
-- university: Oles Honchar Dnipro National University
-  degree: Bachelor's Degree
-  field: Software Engineering
-  endDate: 2016
   startDate: 2014
 
 - university: Rocket-and-Space Engineering College
   degree: College
   field: Computer Software Engineering
+  logo: dkrkm.png
   endDate: 2014
   startDate: 2010

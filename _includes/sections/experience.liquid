@@ -1,28 +1,27 @@
 {% assign headline = include.headline | default: "Work Experience" %}
 
-
 {% capture includeContent %}
 {% for job in include.experience %}
-<article class="job">
-    <div class="job-logo">
+<article class="entity job">
+    <div class="entity-logo">
         {% if job.logo %}
             <img src="{{ "assets/images/" | relative_url | append: job.logo }}" alt="{{ job.company }}" />
         {% else %}
             <img src="{{ "assets/images/" | relative_url | append: 'no-image.png' }}" alt="{{ job.company }}" />
         {% endif %}
     </div>
-    <div class="job-details">
-        <div class="job-summary-info">
-            <h3 class="job-position">{{ job.position }}</h3>
-            <h4 class="job-name">{{ job.company }}</h4>
-            <div class="job-duration">
+    <div class="entity-details">
+        <div class="entity-summary-info">
+            <h3 class="entity-position">{{ job.position }}</h3>
+            <h4 class="entity-name">{{ job.company }}</h4>
+            <div class="entity-duration">
                 <span>{{ job.startDate }} - {{ job.endDate }}</span>
                 {% if job.duration %}
                     <span class="bullet">{{ job.duration }}</span>
                 {% endif %}
             </div>
         </div>
-        <p class="job-description">
+        <p class="entity-description">
             {{ job.description }}
         </p>
     </div>
@@ -31,5 +30,3 @@
 {% endcapture %}
 
 {%- include section.liquid title=headline content=includeContent %}
-
-

@@ -1,11 +1,24 @@
 {% assign headline = include.headline | default: "Education" %}
-{% assign education = include.education[0] %}
 
 {% capture includeContent %}
-<article>
-    <h4>{{ education.university }}</h4>
-    <p class="sub-details">{{ education.degree }}, {{ education.field }}</p>
-</article>
+    {% for study in include.education %}
+        <article class="entity education">
+            <div class="entity-logo">
+                {% if study.logo %}
+                    <img src="{{ "assets/images/" | relative_url | append: study.logo }}" alt="{{ job.company }}" />
+                {% else %}
+                    <img src="{{ "assets/images/" | relative_url | append: 'no-image.png' }}" alt="{{ job.company }}" />
+                {% endif %}
+            </div>
+            <div class="entity-details">
+                <div class="entity-summary-info">
+                    <h3 class="entity-position">{{ study.university }}</h3>
+                    <h4 class="entity-name">{{ study.degree }}, {{ study.field }}</h4>
+                    <div class="entity-duration">{{ study.startDate }} - {{ study.endDate }}</div>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
 {% endcapture %}
 
 {%- include section.liquid title=headline content=includeContent %}

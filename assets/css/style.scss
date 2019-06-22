@@ -24,7 +24,7 @@
     }
 }
 
-#main-details {
+#header {
     padding: 15px 25px;
     border-bottom: 2px solid #cf8a05;
     background: #ededed;
@@ -87,38 +87,24 @@
     }
 }
 
-#main-area {
+#main {
     padding: 20px 40px;
 }
 
-#work-experience .left-column {
-    flex-basis: 27%;
-    text-align: right;
-    padding-right: 10px;
-    min-width: 155px;
+
+.bullet:before {
+  content: '\00B7';
+  margin: 0 5px;
 }
 
-#work-experience .job-duration {
-    font-style: italic;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.column {
-    flex: 0 1 100%;
-}
-
-.job {
-    .job-logo {
+.entity {
+    .entity-logo {
         width: 56px;
         height: 56px;
         float: left;
         padding: 4px;
 
-        & + .job-details .job-summary-info {
+        & + .entity-details .entity-summary-info {
             margin-left: 75px;
 
             @include media-query($screen-sm) {
@@ -127,71 +113,48 @@
         }
     }
 
-    .job-summary-info {
+    .entity-summary-info {
         margin-left: 80px;
     }
 
-    .job-details {
+    .entity-details {
         margin-top: 16px;
     }
 
-    .job-position {
-        font-size: $base-font-size;
-        font-weight: 600;
-        line-height: 1.5;
-        font-family: inherit;
-    }
-
-    .job-name {
-        font-size: $base-font-size;
-        font-weight: 400;
-        line-height: 1.5;
-        font-family: inherit;
-    }
-
-    .job-duration {
+    .entity-duration {
         color: #666666;
         font-size: $small-font-size;
-    }
-
-    .bullet:before {
-        content: '\00B7';
-        margin: 0 5px;
-    }
-
-    .job-description {
-        margin-top: 6px;
-
-        &:after {
-            content: '';
-            display: block;
-            margin-top: 16px;
-            border-bottom: 1px solid #dedede;
-        }
-
-        @include media-query($screen-sm) {
-            margin-left: 80px;
-        }
+        font-style: italic;
     }
 }
 
-.section-title h2 {
-    font-style: italic;
-    font-size: 1.5em;
-    color: #cf8a05;
-    margin-bottom: 15px;
-    font-weight: 400;
+.job {
+  .entity-description {
+    margin-top: 6px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin-top: 16px;
+      border-bottom: 1px solid #dedede;
+    }
+
+    @include media-query($screen-sm) {
+      margin-left: 80px;
+    }
+  }
+
+  &:last-child {
+      .entity-description:after {
+          content: none;
+      }
+  }
 }
 
-.section-content h4 {
-    font-size: 1.5em;
-    margin-bottom: 4px;
-    font-weight: 600;
-}
-
-.sub-details {
-    font-style: italic;
-    margin-bottom: 3px;
+.education:not(:last-child) {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .key-skills {
@@ -203,10 +166,10 @@
     margin-bottom: 20px;
     font-size: 1em;
     color: #444;
-}
 
-.key-skills ul li {
-    margin-bottom: 3px;
+    ul li {
+        margin-bottom: 3px;
+    }
 }
 
 #footer {
@@ -216,55 +179,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .btn {
+        margin: 0 5px;
+    }
 }
 
-#footer .btn {
-    margin: 0 5px;
+@media all and (max-width: $screen-sm) {
+    #header, #main, section, #footer {
+        padding: 25px;
+    }
 }
-
-// @media all and (max-width: 601px) {
-//     .name, .contact-details {
-//         float: none;
-//         width: 100%;
-//         text-align: center;
-//     }
-
-//     .section-title, .section-content {
-//         float: none;
-//         width: 100%;
-//     }
-
-//     .section-title {
-//         margin-left: -2px;
-//         font-size: 1.25em;
-//     }
-// }
-
-// @media all and (max-width: 480px) {
-//     #main-details {
-//         padding: 15px 15px;
-//     }
-
-//     section {
-//         padding: 15px 0 0;
-//     }
-
-//     #main-area {
-//         padding: 0 25px;
-//     }
-
-//     #name h1 {
-//         line-height: .8em;
-//         margin-bottom: 4px;
-//     }
-// }
-
-// @media print {
-//     .job {
-//         page-break-inside: avoid;
-//     }
-
-//     #footer {
-//         display: none;
-//     }
-// }
