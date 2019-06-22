@@ -1,14 +1,23 @@
 {% assign headline = include.headline | default: "Work Experience" %}
 
+
 {% capture includeContent %}
 {% for job in include.experience %}
-<article class="job row">
-    <div class="column left-column job-duration">
-        <i class="job-duration">{{ job.startDate }} - {{ job.endDate }}</i>
+<article class="job">
+    {% if job.logo %}
+    <div class="job-logo">
+        <img src="{{ "assets/images/" | relative_url | append: job.logo }}" alt="{{ job.company }}" />
     </div>
-    <div class="column description">
+    {% endif %}
+    <div class="description">
+        <h3 class="job-position">{{ job.position }}</h3>
         <h4 class="job-name">{{ job.company }}</h4>
-        <p class="job-name sub-details">{{ job.position }}</p>
+        <div class="job-duration">
+            <span>{{ job.startDate }} - {{ job.endDate }}</span>
+            {% if job.duration %}
+                <span class="bullet">{{ job.duration }}</span>
+            {% endif %}
+        </div>
         <p class="job-description">
             {{ job.description }}
         </p>

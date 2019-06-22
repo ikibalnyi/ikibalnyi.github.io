@@ -2,6 +2,8 @@
   position: Software Engineer
   startDate: Jun 2018
   endDate: Present
+  duration: 1 yr
+  logo: dh.png
   description: |
     Configuration of gitlab CI/CD processes.
     Proactively taking a leading role in building complex applications
@@ -12,6 +14,8 @@
   position: Web Developer
   startDate: Sep 2017
   endDate: Jun 2018
+  duration: 10 mos
+  logo: sociomantic.png
   description: |
     Development and maintenance of a complex SPA using React and MobX.
     As a part of a core team, building React framework for internal usage.
@@ -21,6 +25,8 @@
   position: Web Developer
   startDate: Nov 2015
   endDate: Sep 2017
+  duration: 1 yr 11 mos
+  logo: opo.jpeg
   description: |
     Full stack websites development and maintenance (tuning Nginx/Apache web servers)
     using different programming languages (Python, Javascript, PHP, Go),
@@ -30,6 +36,7 @@
   position: Web Developer
   startDate: Oct 2013
   endDate: Nov 2015
+  duration: 3 yr 2 mos
   description: |
     Building web applications using PHP, Javascript, HTML, CSS.
     Making templates and plugins for CMS Wordpress.

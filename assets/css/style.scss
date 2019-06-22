@@ -57,6 +57,10 @@
         display: flex;
         align-items: center;
 
+        .profile {
+            margin-bottom: 0;
+        }
+
         .contact-details {
             text-align: right;
 
@@ -87,20 +91,6 @@
     padding: 20px 40px;
 }
 
-section {
-    border-top: 1px solid #dedede;
-    padding: 20px 0 0;
-}
-
-section:first-child {
-    border-top: 0;
-    padding-top: 0;
-}
-
-section:last-child {
-    padding-top: 20px;
-}
-
 #work-experience .left-column {
     flex-basis: 27%;
     text-align: right;
@@ -109,7 +99,7 @@ section:last-child {
 }
 
 #work-experience .job-duration {
-    line-height: 23px;
+    font-style: italic;
 }
 
 .row {
@@ -119,6 +109,55 @@ section:last-child {
 
 .column {
     flex: 0 1 100%;
+}
+
+.job {
+    .job-logo {
+        width: 56px;
+        height: 56px;
+        float: left;
+        padding: 4px;
+    }
+
+    .description {
+        margin-top: 16px;
+        margin-left: 80px;
+
+        &:after {
+            content: '';
+            display: block;
+            margin-top: 16px;
+            border-bottom: 1px solid #dedede;
+        }
+    }
+
+    .job-position {
+        font-size: $base-font-size;
+        font-weight: 600;
+        line-height: 1.5;
+        font-family: inherit;
+    }
+
+    .job-name {
+        font-size: $base-font-size;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: inherit;
+    }
+
+    .job-duration {
+        color: #666666;
+        font-size: $small-font-size;
+    }
+
+    .bullet:before {
+        content: '\00B7';
+        margin: 0 5px;
+    }
+
+    .job-description {
+        margin-top: 6px;
+    }
 }
 
 .section-title h2 {
