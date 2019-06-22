@@ -117,11 +117,22 @@
         height: 56px;
         float: left;
         padding: 4px;
+
+        & + .job-details .job-summary-info {
+            margin-left: 75px;
+
+            @include media-query($screen-sm) {
+                margin-left: 80px;
+            }
+        }
     }
 
-    .description {
-        margin-top: 16px;
+    .job-summary-info {
         margin-left: 80px;
+    }
+
+    .job-details {
+        margin-top: 16px;
 
         &:after {
             content: '';
@@ -157,6 +168,10 @@
 
     .job-description {
         margin-top: 6px;
+
+        @include media-query($screen-sm) {
+            margin-left: 80px;
+        }
     }
 }
 
