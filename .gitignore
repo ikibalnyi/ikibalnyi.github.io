@@ -16,10 +16,12 @@ node_modules/
 
 # Yarn Integrity file
 .yarn-integrity
-
 .idea
 
 # Jekyll
 _site
 .sass-cache
 .jekyll-metadata
+
+# OS Files
+.DS_Store
