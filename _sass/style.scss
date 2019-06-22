@@ -19,7 +19,8 @@ $brand-color-darken: scale-color($brand-color, $lightness: -15%) !default;
 // Width of the content area
 $content-width: 800px !default;
 
-$screen-sm: 480px !default;
+$screen-xs: 480px !default;
+$screen-sm: 680px !default;
 $screen-md: 860px !default;
 $screen-lg: 1448px !default;
 

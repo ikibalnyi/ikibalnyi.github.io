@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{%- include header.html %}
+{%- include header.liquid %}
 
 <main id="main-area">
     {% capture summary%}
@@ -16,13 +16,13 @@ layout: default
         </p>
     {% endcapture %}
 
-    {%- include section.html title="Personal Profile" content=summary %}
+    {%- include section.liquid title="Personal Profile" content=summary %}
 
-    {%- include sections/key-skills.html keySkills=site.data.about.keySkills %}
+    {%- include sections/key-skills.liquid keySkills=site.data.about.keySkills %}
 
-    {%- include sections/experience.html experience=site.data.experience %}
+    {%- include sections/experience.liquid experience=site.data.experience %}
 
-    {%- include sections/education.html education=site.data.education %}
+    {%- include sections/education.liquid education=site.data.education %}
 </main>
 
-{%- include footer.html %}
+{%- include footer.liquid %}

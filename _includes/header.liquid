@@ -1,0 +1,21 @@
+<header id="main-details">
+    <div class="profile">
+        <div class="photo">
+            <img src="{{ "/assets/images/headshot.jpg" | relative_url }}" alt="{{ site.data.name }}" />
+        </div>
+    
+        <div class="headline">
+            <h1>{{ site.data.about.name }}</h1>
+            <h2>{{ site.data.about.headline }}</h2>
+            <div>{{ site.data.about.location }}</div>
+        </div>
+    </div>
+
+    <div class="contact-details">
+        <div class="linkedIn"><a href="https://www.linkedin.com/in/{{ site.data.about.linkedIn }}" target="_blank">LinkedIn</a></div>
+        <div class="email"><a href="mailto:{{ site.data.about.email }}" target="_blank">{{ site.data.about.email }}</a></div>
+        <div class="website"><a href="https://{{ site.data.about.website }}">{{ site.data.about.website }}</a></div>
+        <!-- <div class="github"><a href="https://github.com/{{ site.data.about.github }}" target="_blank">{{ site.data.about.github }}.github.io</a></div> -->
+        <div class="phone"><a href="tel:{{ site.data.about.phone }}" target="_blank">{{ site.data.about.phone }}</a></div>
+    </div>
+</header>

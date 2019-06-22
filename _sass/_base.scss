@@ -9,71 +9,92 @@ dl, dd, ol, ul, figure {
 }
 
 *, ::after, ::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /**
  * Basic styling
  */
+html {
+    font: $base-font-weight #{$base-font-size} $base-font-family;
+}
+
 body {
-  font: $base-font-weight #{$base-font-size} $base-font-family;
-  color: $text-color;
-  background-color: $background-primary-color;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    color: $text-color;
+    background-color: $background-primary-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+       -moz-font-feature-settings: "kern" 1;
+         -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    @media (min-width: $screen-sm) {
+        background: #3b0930 url(assets/images/bg.jpeg) no-repeat center / cover;
+        background-attachment: fixed;
+    }
 }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+}
+
+/**
+ * headers
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include media-query($screen-md) {
+        font-size: 2.4em;
+    }
+}
+
+h2 {
+    font-size: 1.5em;
+
+    @include media-query($screen-md) {
+        font-size: 2em;
+    }
 }
 
 /**
  * `main` element
  */
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+    display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
 /**
  * Images
  */
 img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-/**
- * Figures
- */
-figure > img {
-  display: block;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 /**
  * Lists
  */
- ul, ol {
-  margin-left: $spacing-unit;
-}
-
 li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -81,45 +102,47 @@ li {
  * Links
  */
 a {
-  color: $text-color;
-  text-decoration: none;
-  transition: color .2s ease-in;
+    color: $text-color;
+    text-decoration: none;
 
-  &:hover {
-    color: $brand-color;
-  }
+    &:hover {
+        color: $brand-color;
+        text-decoration: underline;
+    }
 }
 
 /**
  * Paragraph
  */
 p {
-  margin-bottom: 20px;
-  color: $text-color;
-  line-height: $text-line-height;
+    margin-bottom: 20px;
+    color: $text-color;
+    line-height: $text-line-height;
 }
 
 /**
  * Wrapper
  */
 .wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  background-color: $background-primary-color;
-  @extend %clearfix;
+    background-color: $background-primary-color;
+    @extend %clearfix;
 
-  @include media-query($screen-md) {
-    max-width: $content-width;
-    margin-top: $spacing-unit;
-    margin-bottom: $spacing-unit;
-  }
-
-  @media print {
-    .wrapper {
-      width: auto;
-      margin: 0;
+    @include media-query($screen-sm) {
+      margin: $spacing-unit;
     }
-  }
+
+    @include media-query($screen-md) {
+        max-width: $content-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media print {
+        .wrapper {
+            width: auto;
+            margin: 0;
+        }
+    }
 }
 
 
@@ -127,53 +150,61 @@ p {
  * Buttons
  */
 .btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.4;
-  border-radius: 4px;
-  user-select: none;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 4px;
+    user-select: none;
 }
 
 .btn-primary {
-  color: $text-color-inverse;
-  background-color: $brand-color;
-  border-color: $brand-color;
-
-  &:hover {
     color: $text-color-inverse;
-    background-color: $brand-color-darken;
-    border-color: $brand-color-darken;
-  }
+    background-color: $brand-color;
+    border-color: $brand-color;
+
+    &:hover {
+        color: $text-color-inverse;
+        background-color: $brand-color-darken;
+        border-color: $brand-color-darken;
+        text-decoration: none;
+    }
 }
 
 .btn-secondary {
-  color: $brand-color-darken;
-  border-color: $brand-color-darken;
-  background-color: transparent;
+    color: $brand-color-darken;
+    border-color: $brand-color-darken;
+    background-color: transparent;
 
-  &:hover {
-    color: scale-color($brand-color, $lightness: -30%);
-    border-color: scale-color($brand-color, $lightness: -30%);
-    text-decoration: underline;
-  }
+    &:hover {
+        color: scale-color($brand-color, $lightness: -30%);
+        border-color: scale-color($brand-color, $lightness: -30%);
+        text-decoration: underline;
+    }
 }
 
 /**
  * Clearfix
  */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+%clearfix {
+    @include clearfix;
 }
