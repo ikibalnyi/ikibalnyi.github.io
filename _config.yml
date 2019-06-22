@@ -12,4 +12,4 @@ exclude:
   - .idea
   - .gitignore
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
