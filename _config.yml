@@ -11,3 +11,5 @@ plugins:
 exclude:
   - .idea
   - .gitignore
+
+theme: jekyll-theme-cayman
