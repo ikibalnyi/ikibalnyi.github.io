@@ -33,7 +33,7 @@ body {
     flex-direction: column;
 
     @media (min-width: $screen-sm) {
-        background: #3b0930 url(/assets/images/bg.jpeg) no-repeat center / cover;
+        background: #3b0930 url(/assets/img/bg.jpg) no-repeat center / cover;
         background-attachment: fixed;
     }
 }

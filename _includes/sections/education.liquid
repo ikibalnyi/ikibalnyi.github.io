@@ -5,9 +5,9 @@
         <article class="entity education">
             <div class="entity-logo">
                 {% if study.logo %}
-                    <img src="{{ "assets/images/" | relative_url | append: study.logo }}" alt="{{ job.company }}" />
+                    <img src="{{ "assets/img/" | relative_url | append: study.logo }}" alt="{{ job.company }}" />
                 {% else %}
-                    <img src="{{ "assets/images/" | relative_url | append: 'no-image.png' }}" alt="{{ job.company }}" />
+                    <img src="{{ "assets/img/" | relative_url | append: 'no-image.png' }}" alt="{{ job.company }}" />
                 {% endif %}
             </div>
             <div class="entity-details">
