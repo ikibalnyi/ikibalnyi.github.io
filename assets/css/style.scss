@@ -11,8 +11,15 @@
     > div {
         display: inline-block;
 
+        > * {
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 0;
+        }
+
         &:not(:last-child):after {
             content: '●';
+            font-size: .7em;
             margin: 0 5px;
         }
     }

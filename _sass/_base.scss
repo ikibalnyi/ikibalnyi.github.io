@@ -51,24 +51,23 @@ ul, ol, dl, figure,
  * headers
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
 
     @include media-query($screen-md) {
-        font-size: 2.4em;
+        font-size: 2.2em;
     }
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 
     @include media-query($screen-md) {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 }
 
