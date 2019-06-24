@@ -24,6 +24,9 @@ $screen-sm: 680px !default;
 $screen-md: 860px !default;
 $screen-lg: 1448px !default;
 
+$print-xs: 480px !default;
+$print-sm: 580px !default;
+
 // Use media queries like this:
 // @include media-query($screen-sm) {
 //   .wrapper {
@@ -32,6 +35,12 @@ $screen-lg: 1448px !default;
 //   }
 // }
 @mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin media-query-print($device) {
   @media screen and (min-width: $device) {
     @content;
   }

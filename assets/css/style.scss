@@ -18,17 +18,13 @@
     }
 
     @media print {
-        .linkedIn {
-            display: none;
+        .linked-in {
+            display: none !important;
         }
     }
 }
 
 #header {
-    padding: 15px 25px;
-    border-bottom: 2px solid #cf8a05;
-    background: #ededed;
-
     .profile {
         margin-bottom: 15px;
         display: flex;
@@ -51,7 +47,7 @@
         }
     }
 
-    @include media-query($screen-sm) {
+    @media screen and (min-width: $screen-sm), print and (min-width: $print-xs) {
         @include clearfix;
 
         display: flex;
@@ -75,10 +71,6 @@
             }
         }
     }
-
-    @include media-query($screen-sm) {
-        padding: 25px 35px;
-    }
 }
 
 .headline {
@@ -87,34 +79,41 @@
     }
 }
 
-#main {
-    padding: 20px 40px;
-}
-
 
 .bullet:before {
-  content: '\00B7';
-  margin: 0 5px;
+    content: '\00B7';
+    margin: 0 5px;
 }
 
 .entity {
+    page-break-inside: avoid;
+
     .entity-logo {
         width: 56px;
         height: 56px;
         float: left;
         padding: 4px;
 
-        & + .entity-details .entity-summary-info {
-            margin-left: 75px;
 
-            @include media-query($screen-sm) {
-                margin-left: 80px;
+        @media screen {
+            & + .entity-details .entity-summary-info {
+                margin-left: 75px;
+
+                @include media-query($screen-sm) {
+                    margin-left: 80px;
+                }
             }
+        }
+
+        @media print {
+            display: none;
         }
     }
 
-    .entity-summary-info {
-        margin-left: 80px;
+    @media screen {
+        .entity-summary-info {
+            margin-left: 80px;
+        }
     }
 
     .entity-duration {
@@ -125,26 +124,26 @@
 }
 
 .job {
-  .entity-description {
-    margin-top: 6px;
+    .entity-description {
+        margin-top: 6px;
 
-    &:after {
-      content: '';
-      display: block;
-      margin-top: 16px;
-      border-bottom: 1px solid #dedede;
+        &:after {
+            content: '';
+            display: block;
+            margin-top: 16px;
+            border-bottom: 1px solid #dedede;
+        }
+
+        @include media-query($screen-sm) {
+            margin-left: 80px;
+        }
     }
 
-    @include media-query($screen-sm) {
-      margin-left: 80px;
+    &:last-child {
+        .entity-description:after {
+            content: none;
+        }
     }
-  }
-
-  &:last-child {
-      .entity-description:after {
-          content: none;
-      }
-  }
 }
 
 .education:not(:last-child) {
@@ -169,20 +168,11 @@
 }
 
 #footer {
-    padding: 25px 35px;
-    border-top: 2px solid #cf8a05;
-    background: #ededed;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .btn {
         margin: 0 5px;
-    }
-}
-
-@media all and (max-width: $screen-sm) {
-    #header, #main, section, #footer {
-        padding: 25px;
     }
 }
