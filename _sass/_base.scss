@@ -12,6 +12,12 @@ dl, dd, ol, ul, figure {
     box-sizing: border-box;
 }
 
+:root {
+    --brand-color: #{$brand-color};
+    --brand-color-1: #{$brand-color-1};
+    --brand-color-2: #{$brand-color-2};
+}
+
 /**
  * Basic styling
  */

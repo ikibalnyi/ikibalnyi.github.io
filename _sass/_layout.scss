@@ -1,7 +1,7 @@
 
 #header {
     padding: 15px 25px;
-    border-bottom: 2px solid #cf8a05;
+    border-bottom: 2px solid $brand-color;
     background: #ededed;
 
     @include media-query($screen-sm) {
@@ -30,7 +30,7 @@
 section {
     .section-title {
         font-style: italic;
-        color: #cf8a05;
+        color: $brand-color;
         margin-bottom: 16px;
         font-size: 1.2em;
         font-weight: 400;
@@ -39,7 +39,7 @@ section {
 
 #footer {
     padding: 25px 35px;
-    border-top: 2px solid #cf8a05;
+    border-top: 2px solid $brand-color;
     background: #ededed;
 
     @media print {
