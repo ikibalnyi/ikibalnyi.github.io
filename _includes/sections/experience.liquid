@@ -13,7 +13,7 @@
     <div class="entity-details">
         <div class="entity-summary-info">
             <h3 class="entity-position">{{ job.position }}</h3>
-            <h4 class="entity-name">{{ job.company }}</h4>
+            <h4 class="entity-name">{% if job.url %}<a href="{{ job.url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</h4>
             <div class="entity-duration">
                 <span>{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }}</span>
                 {% if job.duration %}

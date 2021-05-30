@@ -1,4 +1,5 @@
 - company: McMakler
+  url: https://www.mcmakler.de/
   position: Software Engineer -> Frontend Tech Lead
   startDate: Oct 2019
   endDate: Present
@@ -16,6 +17,7 @@
     - Interviewed developers.
 
 - company: dunnhumby GmbH (ex- Sociomantic labs)
+  url: https://www.dunnhumby.com/
   position: Software Engineer
   startDate: Sep 2017
   endDate: Sep 2019
@@ -30,6 +32,7 @@
     - Mentored junior/mid developers.
 
 - company: OnePlanetOps
+  url: https://oneplanetgroup.com/
   position: Web Developer
   startDate: Nov 2015
   endDate: Sep 2017
