@@ -1,25 +1,33 @@
-- company: dunnhumby GmbH
-  position: Software Engineer
-  startDate: Jun 2018
+- company: McMakler
+  position: Software Engineer -> Frontend Tech Lead
+  startDate: Oct 2019
   endDate: Present
-  duration: 1 yr
-  logo: dh.png
-  description: |
-    Configuration of gitlab CI/CD processes.
-    Proactively taking a leading role in building complex applications
-    using React+Redux and stylize with styled-components.
-    Mentorship of junior developers.
+  duration: 1 yr 8 mos
+  logo: mcmakler.jpeg
+  description:
+    - Drove rewriting poorly developed graphql middleware from js to typescript + fp-ts.
+    - Improved project maintainability and scalability by rewriting from huge monolith to monorepo structure.
+    - Led a team to build customer-facing projects.
+    - Remastered marketing funnel to simplify the work of marketing to be able to run
+      experiments with less involvement from development side. Remaster also improved the overall
+      performance, scalability and maintainablity of the project.
+    - Configured new and improved the performance of existing CI\CD pipelines.
+    - Mentored junior/mid developers.
+    - Interviewed developers.
 
-- company: Sociomantic Labs
-  position: Web Developer
+- company: dunnhumby GmbH (ex- Sociomantic labs)
+  position: Software Engineer
   startDate: Sep 2017
-  endDate: Jun 2018
-  duration: 10 mos
-  logo: sociomantic.png
-  description: |
-    Development and maintenance of a complex SPA using React and MobX.
-    As a part of a core team, building React framework for internal usage.
-    In June 2018 Sociomantic Labs was fully integrated into dunnhumby GmbH.
+  endDate: Sep 2019
+  duration: 2 yrs
+  logo: dh.png
+  description:
+    - Maintained company's legacy backbone website. Being a part of the core team was building internal React
+      framework to transition legacy website to a new codebase.
+    - Led development of a new platform that helps marketing creating advertising campaigns.
+    - Drove development of a react component library following company's design system.
+    - Configured and improved the performance of gitlab CI\CD pipelines from 25 mins down to sub 5 mins.
+    - Mentored junior/mid developers.
 
 - company: OnePlanetOps
   position: Web Developer
@@ -27,19 +35,21 @@
   endDate: Sep 2017
   duration: 1 yr 11 mos
   logo: opo.jpeg
-  description: |
-    Full stack websites development and maintenance (tuning Nginx/Apache web servers)
-    using different programming languages (Python, Javascript, PHP, Go),
-    frameworks (ReactJS, Django, Yii2, CherryPy) and CMS (Wordpress).
+  description:
+    - Built from scratch as well as remastered and maintained various company's websites.
+      Requalified from PHP to Python developer and started using React instead of Vanila JS.
+    - Optimized public websites to improve Google ranking to top 10 and pagespeed scores from < 50 to 90+.
+    - Developed from scratch a platform helping homeowners connecting with contractors for various
+      home improvement works.
+    - Speed up the work of sales searching and processing contractors by making a web crawler
+      scrapping contractors information from publicly available sources and organazing scrapped data
+      into a user friendly dashboard where sales can process phone calls in a form of queue.
 
 - company: Freelance
   position: Web Developer
   startDate: Oct 2013
   endDate: Nov 2015
   duration: 3 yr 2 mos
-  description: |
-    Building web applications using PHP, Javascript, HTML, CSS.
-    Making templates and plugins for CMS Wordpress.
-    Working with different payment systems and payment aggregators using
-    appropriate APIs, such as LiqPay, Paypal, Webmoney, etc.
-    Creating stable cross browser responsive designs.
+  description:
+    - Built various responsive cross browser web applications using PHP, Javascript, HTML, CSS.
+      Organized a cross-functional team to provide turnkey website design and development.

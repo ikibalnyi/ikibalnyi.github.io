@@ -131,24 +131,30 @@
 }
 
 .job {
+    margin-bottom: 20px;
+
     .entity-description {
         margin-top: 6px;
 
-        &:after {
-            content: '';
-            display: block;
-            margin-top: 16px;
-            border-bottom: 1px solid #dedede;
-        }
-
-        @include media-query($screen-sm) {
-            margin-left: 80px;
+        p {
+            margin-bottom: 10px;
         }
     }
 
-    &:last-child {
-        .entity-description:after {
-            content: none;
+    &:after {
+        content: '';
+        display: block;
+        margin-top: 16px;
+        border-bottom: 1px solid #dedede;
+    }
+
+    &:last-child:after {
+        content: none;
+    }
+
+    &:after, & .entity-description {
+        @include media-query($screen-sm) {
+            margin-left: 80px;
         }
     }
 }

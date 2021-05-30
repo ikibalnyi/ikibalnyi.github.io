@@ -3,7 +3,7 @@
         <div class="photo">
             <img src="{{ "/assets/img/headshot.jpg" | relative_url }}" alt="{{ site.data.name }}" />
         </div>
-    
+
         <div class="headline">
             <h1>{{ site.data.about.name }}</h1>
             <h2>{{ site.data.about.headline }}</h2>
@@ -13,8 +13,8 @@
 
     <div class="contact-details">
         <div class="linked-in"><a href="https://www.linkedin.com/in/{{ site.data.about.linkedIn }}" target="_blank">LinkedIn</a></div>
+        <div class="github"><a href="https://github.com/{{ site.data.about.github }}" target="_blank">Github</a></div>
         <div class="email"><a href="mailto:{{ site.data.about.email }}" target="_blank">{{ site.data.about.email }}</a></div>
         <div class="website"><a href="https://{{ site.data.about.website }}">{{ site.data.about.website }}</a></div>
-        <!-- <div class="github"><a href="https://github.com/{{ site.data.about.github }}" target="_blank">{{ site.data.about.github }}.github.io</a></div> -->
     </div>
 </header>

@@ -15,15 +15,15 @@
             <h3 class="entity-position">{{ job.position }}</h3>
             <h4 class="entity-name">{{ job.company }}</h4>
             <div class="entity-duration">
-                <span>{{ job.startDate }} - {{ job.endDate }}</span>
+                <span>{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }}</span>
                 {% if job.duration %}
                     <span class="bullet">{{ job.duration }}</span>
                 {% endif %}
             </div>
         </div>
-        <p class="entity-description">
-            {{ job.description }}
-        </p>
+        <div class="entity-description">
+            {% for paragraph in job.description %}<p>{{ paragraph }}</p>{% endfor %}
+        </div>
     </div>
 </article>
 {% endfor %}
