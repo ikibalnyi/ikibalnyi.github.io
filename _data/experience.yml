@@ -16,7 +16,7 @@
       startDate: Oct 2019
       endDate: Jan 2021
       description:
-        - Drove rewriting poorly developed graphql middleware from js to typescript + fp-ts.
+        - Drove rewriting poorly developed graphql gateway from js to typescript + fp-ts.
         - Improved project maintainability and scalability by rewriting from monolith to monorepo structure.
         - Configured new and improved the performance of existing CI\CD pipelines.
         - Mentored junior/mid developers.

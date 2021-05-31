@@ -23,12 +23,6 @@
             margin: 0 5px;
         }
     }
-
-    @media print {
-        .linked-in {
-            display: none !important;
-        }
-    }
 }
 
 #header {
@@ -183,9 +177,9 @@
         &:not(:last-child):after {
             content: "";
             position: absolute;
-            height: calc(100% - 24px);
+            height: calc(100% - 32px);
             min-height: 38px;
-            top: 32px;
+            top: 36px;
             left: 23px;
             width: 2px;
             background-color: rgba(0, 0, 0, 0.08);
