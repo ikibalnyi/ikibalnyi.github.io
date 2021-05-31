@@ -4,27 +4,48 @@
 {% for job in include.experience %}
 <article class="entity job">
     <div class="entity-logo">
-        {% if job.logo %}
-            <img src="{{ "assets/img/" | relative_url | append: job.logo }}" alt="{{ job.company }}" />
-        {% else %}
-            <img src="{{ "assets/img/" | relative_url | append: 'no-image.png' }}" alt="{{ job.company }}" />
-        {% endif %}
+        {% if job.url %}<a href="{{ job.url }}">{% endif %}
+        <img src="{{ "assets/img/" | relative_url }}{{ job.logo | default: 'no-image.png' }}" alt="{{ job.company }}" />
+        {% if job.url %}</a>{% endif %}
     </div>
     <div class="entity-details">
         <div class="entity-summary-info">
-            <h3 class="entity-position">{{ job.position }}</h3>
-            <h4 class="entity-name">{% if job.url %}<a href="{{ job.url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</h4>
+            {% if job.position %}<h3 class="entity-position">{{ job.position }}</h3>{% endif %}
+            <h4 class="entity-name">
+                {% if job.url %}<a href="{{ job.url }}">{% endif %}
+                {{ job.company }}
+                {% if job.url %}</a>{% endif %}
+            </h4>
             <div class="entity-duration">
-                <span>{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }}</span>
-                {% if job.duration %}
-                    <span class="bullet">{{ job.duration }}</span>
+                {% if job.startDate or job.endDate %}
+                    <span>{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }}</span>
                 {% endif %}
+                {% if job.duration %}<span>{{ job.duration }}</span>{% endif %}
             </div>
         </div>
         <div class="entity-description">
             {% for paragraph in job.description %}<p>{{ paragraph }}</p>{% endfor %}
         </div>
     </div>
+    {% if job.roles %}
+        <ul class="roles">
+            {% for role in job.roles %}
+                <li class="entity-details role">
+                    <div class="entity-summary-info">
+                        {% if role.title %}<h3 class="entity-position">{{ role.title }}</h3>{% endif %}
+                        <div class="entity-duration">
+                            {% if role.startDate or role.endDate %}
+                                <span>{{ role.startDate | date: "%b %Y" }} - {{ role.endDate | date: "%b %Y" }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="entity-description">
+                        {% for paragraph in role.description %}<p>{{ paragraph }}</p>{% endfor %}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </article>
 {% endfor %}
 {% endcapture %}

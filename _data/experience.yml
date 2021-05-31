@@ -1,21 +1,25 @@
 - company: McMakler
   url: https://www.mcmakler.de/
-  position: Software Engineer -> Frontend Tech Lead
-  startDate: Oct 2019
-  endDate: Present
   duration: 1 yr 8 mos
   logo: mcmakler.jpeg
-  description:
-    - Drove rewriting poorly developed graphql middleware from js to typescript + fp-ts.
-    - Improved project maintainability and scalability by rewriting from huge monolith to monorepo structure.
-    - Led a team to build customer-facing projects.
-    - Remastered marketing funnel to simplify the work of marketing to be able to run
-      experiments with less involvement from development side. Remaster also improved the overall
-      performance, scalability and maintainablity of the project.
-    - Configured new and improved the performance of existing CI\CD pipelines.
-    - Mentored junior/mid developers.
-    - Interviewed developers.
-
+  roles:
+    - title: Frontend Tech Lead
+      startDate: Jan 2021
+      endDate: Present
+      description:
+        - Led a team to build customer-facing projects.
+        - Led remake of a marketing funnel to simplify the work of marketing to be able to run
+          experiments with less involvement from development side. This also improved the overall
+          scalability and maintainablity of the project.
+        - Enhanced the process and conducted technical interviews to scale up the team.
+    - title: Software Engineer
+      startDate: Oct 2019
+      endDate: Jan 2021
+      description:
+        - Drove rewriting poorly developed graphql middleware from js to typescript + fp-ts.
+        - Improved project maintainability and scalability by rewriting from monolith to monorepo structure.
+        - Configured new and improved the performance of existing CI\CD pipelines.
+        - Mentored junior/mid developers.
 - company: dunnhumby GmbH (ex- Sociomantic labs)
   url: https://www.dunnhumby.com/
   position: Software Engineer
