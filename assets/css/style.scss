@@ -89,10 +89,9 @@
         float: left;
         padding: 4px;
 
-
         @media screen {
             & + .entity-details .entity-summary-info {
-                margin-left: 75px;
+                margin-left: 70px;
 
                 @include media-query($screen-sm) {
                     margin-left: 80px;
@@ -107,12 +106,16 @@
 
     @media screen {
         .entity-summary-info {
-            margin-left: 80px;
-        }
-    }
+            margin-left: 70px;
 
-    .entity-details {
-        min-height: 56px;
+            @include media-query($screen-sm) {
+                margin-left: 80px;
+            }
+        }
+
+        .entity-details {
+            min-height: 56px;
+        }
     }
 
     .entity-duration {
@@ -162,27 +165,37 @@
         position: relative;
         padding-bottom: 10px;
 
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 16px;
-            left: 20px;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 50%;
-            height: 8px;
-            width: 8px;
-        }
+        @media screen {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 16px;
+                left: 20px;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                height: 8px;
+                width: 8px;
+            }
 
-        &:not(:last-child):after {
-            content: "";
-            position: absolute;
-            height: calc(100% - 32px);
-            min-height: 38px;
-            top: 36px;
-            left: 23px;
-            width: 2px;
-            background-color: rgba(0, 0, 0, 0.08);
+            &:not(:last-child):after {
+                content: "";
+                position: absolute;
+                height: calc(100% - 32px);
+                min-height: 38px;
+                top: 36px;
+                left: 23px;
+                width: 2px;
+                background-color: rgba(0, 0, 0, 0.08);
+            }
+
+            .entity-description {
+                margin-left: 70px;
+
+                @include media-query($screen-sm) {
+                    margin-left: 80px;
+                }
+            }
         }
     }
 
@@ -207,7 +220,7 @@
     font-size: 1em;
     color: #444;
 
-    ul li {
+    li {
         margin-bottom: 3px;
     }
 }
