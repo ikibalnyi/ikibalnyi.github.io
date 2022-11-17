@@ -2,15 +2,14 @@
   url: https://nordsecurity.com/
   duration: 1 yr
   logo: nordsec.jpeg
-  roles:
-    - title: Staff Engineer
-      startDate: Nov 2021
-      endDate: Present
-      description:
-        - "Work in checkout team"
-        - Improved reliability of the project by leading set up of monitoring tools for error tracking, tracing and metrics collection
-        - Enhanced tracking by developing a solution to significantly reduce the amount of the events being sent, which reflected on the cost reduction and imroved quality of gathered data
-        - Enhanced the interview process and conducted technical interviews to scale up the team
+  position: Staff Engineer
+  startDate: Nov 2021
+  endDate: Present
+  description:
+    - "Work in checkout team"
+    - Improved reliability of the project by leading set up of monitoring tools for error tracking, tracing and metrics collection
+    - Enhanced tracking by developing a solution to significantly reduce the amount of the events being sent, which reflected on the cost reduction and imroved quality of gathered data
+    - Enhanced the interview process and conducted technical interviews to scale up the team
 
 - company: McMakler
   url: https://www.mcmakler.de/
