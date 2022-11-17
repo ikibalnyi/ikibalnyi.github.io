@@ -4,11 +4,14 @@ layout: default
 
 {%- include header.liquid %}
 
+{% assign currentYear = 'now' | date: '%Y' %}
+{% assign workYears = currentYear | minus: site.data.about.startYear | minus: 1 %}
+
 <main id="main">
     {% capture summary%}
         <p>
-            More than 7 years of experience in web development.
-            Always keep myself up to date with new cutting edge technologies.
+            More than {{ workYears }} years of experience in web development.
+            Keep myself up to date with new cutting edge technologies.
             Self-motivated. Doing things properly, not just closing tickets.
             Drive development from ideas to working solutions.
             Mentor and motivate people to deliver high quality code.
