@@ -1,17 +1,31 @@
+- company: Nord Security
+  url: https://nordsecurity.com/
+  duration: 1 yr
+  logo: nordsec.jpeg
+  roles:
+    - title: Staff Engineer
+      startDate: Nov 2021
+      endDate: Present
+      description:
+        - "Work in checkout team"
+        - Improved reliability of the project by leading set up of monitoring tools for error tracking, tracing and metrics collection
+        - Enhanced tracking by developing a solution to significantly reduce the amount of the events being sent, which reflected on the cost reduction and imroved quality of gathered data
+        - Enhanced the interview process and conducted technical interviews to scale up the team
+
 - company: McMakler
   url: https://www.mcmakler.de/
-  duration: 1 yr 8 mos
+  duration: 2 yrs 1 mo
   logo: mcmakler.jpeg
   roles:
     - title: Frontend Tech Lead
       startDate: Jan 2021
-      endDate: Present
+      endDate: Nov 2021
       description:
         - Led a team to build customer-facing projects.
         - Led remake of a marketing funnel to simplify the work of marketing to be able to run
           experiments with less involvement from development side. This also improved the overall
           scalability and maintainablity of the project.
-        - Enhanced the interviw process and conducted technical interviews to scale up the team.
+        - Enhanced the interview process and conducted technical interviews to scale up the team.
     - title: Software Engineer
       startDate: Oct 2019
       endDate: Jan 2021
@@ -20,6 +34,7 @@
         - Improved project maintainability and scalability by rewriting from monolith to monorepo structure.
         - Configured new and improved the performance of existing CI\CD pipelines.
         - Mentored junior/mid developers.
+
 - company: dunnhumby GmbH (ex- Sociomantic labs)
   url: https://www.dunnhumby.com/
   position: Software Engineer
